@@ -45,7 +45,7 @@ body {
     background-color: #0062cc;
   }
 
-  button[type="calculate"] {
+  button[type="sumbit1"] {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -56,7 +56,7 @@ body {
     margin-top: 10px;
   }
   
-  button[type="calculate"]:hover {
+  button[type="submit1"]:hover {
     background-color: #0062cc;
   }
   
