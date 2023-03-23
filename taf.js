@@ -1,7 +1,6 @@
 const form = document.querySelector('form');
 const input = document.querySelector('#icao');
 const taf = document.querySelector('#taf');
-const weather = document.querySelector('#weather');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
