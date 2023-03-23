@@ -44,6 +44,21 @@ body {
   button[type="submit"]:hover {
     background-color: #0062cc;
   }
+
+  button[type="calculate"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button[type="calculate"]:hover {
+    background-color: #0062cc;
+  }
   
   /* Style the paragraphs that will display the METAR and weather data */
   p {
