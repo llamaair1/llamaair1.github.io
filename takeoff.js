@@ -1,4 +1,4 @@
-function calculateTakeoffDistance() {
+form.addEventListener('calculate', e => {
 	const weight = document.getElementById("weight").value;
 	const runwayLength = document.getElementById("runwayLength").value;
 	const windSpeed = document.getElementById("windSpeed").value;
@@ -11,4 +11,4 @@ function calculateTakeoffDistance() {
 
 	// Display results
 	document.getElementById("result").innerHTML = `Takeoff Distance Required: ${takeoffDistance} m <br>Takeoff Speed: ${takeoffSpeed} kts <br> Recommended Flap Setting: ${recommendedFlapSetting} %`;
-}
+})
