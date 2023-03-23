@@ -1,9 +1,9 @@
-const form = document.querySelector('form');
+const form = document.getElementById('submit-metar');
 const input = document.querySelector('#icao');
 const metar = document.querySelector('#metar');
 const weather = document.querySelector('#weather');
 
-form.addEventListener('submit', e => {
+form.addEventListener('click', e => {
   e.preventDefault();
   const icao = input.value.trim().toUpperCase();
   const url = `https://api.checkwx.com/metar/${icao}/decoded`;

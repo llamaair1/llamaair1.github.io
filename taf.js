@@ -1,8 +1,8 @@
-const form = document.querySelector('form');
+const form = document.getElementById('submit-taf');
 const input = document.querySelector('#icao');
 const taf = document.querySelector('#taf');
 
-form.addEventListener('submit-taf', e => {
+form.addEventListener('click', e => {
   e.preventDefault();
   const icao = input.value.trim().toUpperCase();
   const url = `https://api.checkwx.com/taf/${icao}/decoded`;
