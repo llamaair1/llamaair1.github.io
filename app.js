@@ -25,6 +25,7 @@ form.addEventListener('submit', e => {
       // Extract temperature, wind speed, and direction from the METAR data
       const temperatureMatch = metarText.match(/^(?:METAR|SPECI).+? (M?\d{1,2})\/(M?\d{1,2}) /);
       const temperatureCelsius = temperatureMatch ? temperatureToCelsius(temperatureMatch[1]) : '';
+      const temperature = temperatureCelsius ? `${temperatureCelsius}°C` : 'N/A';
       const windMatch = metarText.match(/(?:^| )(\d{3}|VRB)(\d{2,3})(?:G(\d{2,3}))?(?:KT|MPS)/);
       const windDirection = windMatch ? windMatch[1] : '';
       const windSpeedKnots = windMatch ? parseInt(windMatch[2], 10) : '';
@@ -34,7 +35,7 @@ form.addEventListener('submit', e => {
       const barometer = barometerMatch ? `${barometerMatch[1].slice(0, 2)}.${barometerMatch[1].slice(2)} hPa` : 'N/A';
 
       // Display the temperature, wind speed, and direction in the weather paragraph
-      weather.innerHTML = `Temperature: ${temperatureCelsius}°C<br>Wind Direction: ${windDirection}°<br>Wind Speed: ${windSpeedKnots} knots / ${windSpeedMph} mph / ${windSpeedKph} km/h<br>Barometer: ${barometer}`;
+      weather.innerHTML = `Temperature: ${temperature}°C<br>Wind Direction: ${windDirection}°<br>Wind Speed: ${windSpeedKnots} knots / ${windSpeedMph} mph / ${windSpeedKph} km/h<br>Barometer: ${barometer}`;
     }
   })
   .catch(error => {
