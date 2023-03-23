@@ -17,6 +17,19 @@
   <script src="app.js"></script>
 </body>
 <body>
+  <h1>Airport TAF</h1>
+  <form>
+    <label for="icao">Enter airport ICAO code:</label>
+    <input type="text" id="icao" name="icao" required>
+    <button type="submit" id="submit">Get TAF</button>
+  </form>
+  <p id="metar"></p>
+  <p id="weather"></p> <!-- added a new paragraph element for weather data -->
+
+  <script src="taf.js"></script>
+  <link rel="stylesheet" href="style.css">
+</body>
+<!--<body>
   <link rel="stylesheet" href="style.css">
 	<h1>A320Neo Takeoff Calculator</h1>
 	<form>
@@ -36,6 +49,6 @@
 	</form>
 
 	<p id="result"></p>
-  <script src="takeoff.js"></script>
+  <script src="takeoff.js"></script> -->
 </body>
 </html>
