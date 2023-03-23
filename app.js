@@ -34,7 +34,7 @@ form.addEventListener('submit', e => {
       const barometer = barometerMatch ? `${barometerMatch[1].slice(0, 2)}.${barometerMatch[1].slice(2)} hPa` : 'N/A';
 
       // Display the temperature, wind speed, and direction in the weather paragraph
-      weather.innerHTML = `Temperature: ${temperatureCelsius}°C<br>Wind Direction: ${windDirection}<br>Wind Speed: ${windSpeedKnots} knots / ${windSpeedMph} mph / ${windSpeedKph} km/h<br>Barometer: ${barometer} hPA`;
+      weather.innerHTML = `Temperature: ${temperatureCelsius}°C<br>Wind Direction: ${windDirection}°<br>Wind Speed: ${windSpeedKnots} knots / ${windSpeedMph} mph / ${windSpeedKph} km/h<br>Barometer: ${barometer}`;
     }
   })
   .catch(error => {
